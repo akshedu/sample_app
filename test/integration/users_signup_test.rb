@@ -17,6 +17,7 @@ assert_difference 'User.count', 1 do
   password: "fooyah", password_confirmation: "fooyah"}
 end
 assert_template 'users/show'
+assert is_logged_in?
 end
 
 end
