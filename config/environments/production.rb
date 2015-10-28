@@ -67,12 +67,12 @@ Rails.application.configure do
   host = 'akg-app.herokuapp.com'
   config.action_mailer.default_url_options = {host: host}
   ActionMailer::Base.smtp_settings = {
-    :address            => 'smtp.mailgun.org'
-    :port               => '587'
-    :authenitcation     => :plain
-    :user_name          => 'postmaster@sandbox3bd372958d374c86a1003aec8998c40f.mailgun.org'
-    :password           => '846132f52b2928ee535bb7502316466b'
-    :domain             => 'sandbox3bd372958d374c86a1003aec8998c40f.mailgun.org'
+    :address            => 'smtp.mailgun.org',
+    :port               => '587',
+    :authenitcation     => :plain,
+    :user_name          => 'postmaster@sandbox3bd372958d374c86a1003aec8998c40f.mailgun.org',
+    :password           => '846132f52b2928ee535bb7502316466b',
+    :domain             => 'sandbox3bd372958d374c86a1003aec8998c40f.mailgun.org',
     :enable_starttls_auto => true
   }
 
