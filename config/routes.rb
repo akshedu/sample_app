@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   resources :users
+  resources :account_activations, only: [:edit]
 
   get 'users/new'
   get 'help' => 'static_pages#help'
