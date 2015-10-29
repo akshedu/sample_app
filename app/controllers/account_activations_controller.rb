@@ -7,6 +7,8 @@ def edit
 		log_in user
 		flash[:success] = "Account activated!"
 		redirect_to user
+	elsif user && user.activated?
+		flash[:info] = "Account already activated. Please log in to continue"
 	else
 		flash[:danger] = "Invalid activation link"
 		redirect_to root_url
