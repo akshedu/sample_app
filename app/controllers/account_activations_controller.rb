@@ -9,6 +9,7 @@ def edit
 		redirect_to user
 	elsif user && user.activated?
 		flash[:info] = "Account already activated. Please log in to continue"
+		redirect_to root_url
 	else
 		flash[:danger] = "Invalid activation link"
 		redirect_to root_url
