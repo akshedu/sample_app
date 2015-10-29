@@ -5,6 +5,7 @@ class UsersControllerTest < ActionController::TestCase
  def setup
  	@user = users(:akshansh)
   @other_user = users(:shalmali)
+  @inactive_user = users(:garvit)
  end
 
   test "should get new" do
@@ -58,5 +59,18 @@ class UsersControllerTest < ActionController::TestCase
     end
     assert_redirected_to root_url
   end
-  
+
+  test "should redirect when trying to access inactive user with login" do
+    log_in_as(@user)
+    get :show, id: @inactive_user
+    assert_not flash.empty?
+    assert_redirected_to root_url
+  end
+
+  test "should redirect when trying to access activated user without login" do
+    get :show, id: @user
+    assert_not flash.empty?
+    assert_redirected_to root_url
+  end
+   
 end

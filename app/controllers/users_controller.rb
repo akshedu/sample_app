@@ -9,7 +9,15 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless @user.activated && logged_in?
+    if !logged_in?
+      flash[:danger] = "You must be logged in to access users"
+      redirect_to root_url
+      return
+    elsif !@user.activated
+      flash[:info] = "The user you are trying to access is not activated yet"
+      redirect_to root_url
+      return
+    end 
   end
 
   def destroy
