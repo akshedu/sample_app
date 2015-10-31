@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+ content: "This is the first micropost"
+ created_at: <%= 10.minutes.ago %>
+ user: akshansh
+
+two:
+ content: "This is the second micropost"
+ created_at: <%= 3.years.ago %>
+ user: akshansh
+
+three:
+ content: "This is the third micropost"
+ created_at: <%= 2.hours.ago %>
+ user: shalmali
+
+four:
+ content: "This is the fourth micropost"
+ created_at: <%= Time.zone.now %>
+ user: shalmali
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+ content: <%= Faker::Lorem.sentence(5) %>
+ created_at: <%= 42.days.ago %>
+ user: akshansh
+<% end %>
