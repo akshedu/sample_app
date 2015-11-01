@@ -1,4 +1,9 @@
-production:
- cloudname: 'dejrtx1pr'
+development:
+ cloud_name: 'dejrtx1pr'
  api_key: '952536564313238'
- api_sceret: 'a0Mo73MHmNv21hBbkAeWJ5buWb4'
+ api_secret: 'a0Mo73MHmNv21hBbkAeWJ5buWb4'
+ 
+production:
+ cloud_name: 'dejrtx1pr'
+ api_key: '952536564313238'
+ api_secret: 'a0Mo73MHmNv21hBbkAeWJ5buWb4'
