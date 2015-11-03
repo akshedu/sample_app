@@ -8,7 +8,7 @@ one:
 two:
  content: "This is the second micropost"
  created_at: <%= 3.years.ago %>
- user: akshansh
+ user: lana
 
 three:
  content: "This is the third micropost"
