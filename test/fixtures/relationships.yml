@@ -1,0 +1,15 @@
+one:
+ follower: akshansh
+ followed: lana
+
+two:
+ follower: akshansh
+ followed: mallroy
+
+three:
+ follower: lana
+ followed: akshansh
+
+four:
+ follower: shalmali
+ followed: akshansh
